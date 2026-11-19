@@ -1,0 +1,82 @@
+         model           mimari   aktiv.    lr   param. en iyi ep.   train     val    test  train-val  sn/epoch
+---------------------------------------------------------------------------------------------------------------
+Tek gizli katman       784-128-10     relu   0.3   101770        140  0.9969  0.8726  0.8562     0.1243     13.53
+İki gizli katman    784-256-64-10     relu   0.3   218058        110  0.9894  0.8780  0.8609     0.1114      4.48
+
+Not: 'en iyi ep.' validation başarısının en yüksek olduğu epoch'tur; train/val/test bu modele aittir. sn/epoch, tek başına çalışırken ölçülmüştür.
+
+[Tek gizli katman | val]
+              precision    recall  f1-score   support
+
+ T-shirt/top     0.8547    0.8000    0.8264       500
+     Trouser     0.9837    0.9680    0.9758       500
+    Pullover     0.8234    0.7740    0.7979       500
+       Dress     0.8634    0.8720    0.8677       500
+        Coat     0.7578    0.8260    0.7904       500
+      Sandal     0.9468    0.9260    0.9363       500
+       Shirt     0.6977    0.7340    0.7154       500
+     Sneaker     0.9061    0.9460    0.9256       500
+         Bag     0.9594    0.9460    0.9527       500
+  Ankle boot     0.9531    0.9340    0.9434       500
+
+    accuracy                         0.8726      5000
+   macro avg     0.8746    0.8726    0.8732      5000
+weighted avg     0.8746    0.8726    0.8732      5000
+
+
+[Tek gizli katman | test]
+              precision    recall  f1-score   support
+
+ T-shirt/top     0.8257    0.7720    0.7979      1000
+     Trouser     0.9846    0.9610    0.9727      1000
+    Pullover     0.7745    0.7420    0.7579      1000
+       Dress     0.8628    0.8490    0.8558      1000
+        Coat     0.7296    0.8040    0.7650      1000
+      Sandal     0.9680    0.9080    0.9370      1000
+       Shirt     0.6435    0.6770    0.6598      1000
+     Sneaker     0.9091    0.9500    0.9291      1000
+         Bag     0.9565    0.9460    0.9512      1000
+  Ankle boot     0.9334    0.9530    0.9431      1000
+
+    accuracy                         0.8562     10000
+   macro avg     0.8588    0.8562    0.8570     10000
+weighted avg     0.8588    0.8562    0.8570     10000
+
+
+[İki gizli katman | val]
+              precision    recall  f1-score   support
+
+ T-shirt/top     0.8088    0.8460    0.8270       500
+     Trouser     0.9939    0.9760    0.9849       500
+    Pullover     0.7611    0.8220    0.7904       500
+       Dress     0.9030    0.8940    0.8985       500
+        Coat     0.7632    0.7800    0.7715       500
+      Sandal     0.9667    0.9280    0.9469       500
+       Shirt     0.7316    0.6760    0.7027       500
+     Sneaker     0.9277    0.9500    0.9387       500
+         Bag     0.9854    0.9460    0.9653       500
+  Ankle boot     0.9506    0.9620    0.9563       500
+
+    accuracy                         0.8780      5000
+   macro avg     0.8792    0.8780    0.8782      5000
+weighted avg     0.8792    0.8780    0.8782      5000
+
+
+[İki gizli katman | test]
+              precision    recall  f1-score   support
+
+ T-shirt/top     0.7760    0.8420    0.8077      1000
+     Trouser     0.9917    0.9550    0.9730      1000
+    Pullover     0.7080    0.7880    0.7459      1000
+       Dress     0.8771    0.8490    0.8628      1000
+        Coat     0.7544    0.7800    0.7670      1000
+      Sandal     0.9817    0.9140    0.9467      1000
+       Shirt     0.7186    0.6230    0.6674      1000
+     Sneaker     0.9162    0.9510    0.9333      1000
+         Bag     0.9733    0.9480    0.9605      1000
+  Ankle boot     0.9338    0.9590    0.9462      1000
+
+    accuracy                         0.8609     10000
+   macro avg     0.8631    0.8609    0.8610     10000
+weighted avg     0.8631    0.8609    0.8610     10000
+
